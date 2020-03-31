@@ -181,12 +181,13 @@ class MyPromise{
 	}
 }
 
+
 function getdata(){
 	return new MyPromise((resolve ,reject)=>{
 		setTimeout(()=>{resolve('done')},1000);
 	})
 }
 
-p=getdata().then((data)=>{console.log(data,'getdata');return getdata()}).then((data)=>{console.log(2+data)})
+//p=getdata().then((data)=>{console.log(data,'getdata');return getdata()}).then((data)=>{console.log(2+data)})
 
 console.log("Promise end")
